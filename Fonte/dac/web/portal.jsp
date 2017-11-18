@@ -28,10 +28,10 @@
     <div class="bg"></div>
     <nav class="menu" id="principal">
       <ul>
-        <li><a href="index.html" class="inicio"><i class="fa fa-home" aria-hidden="true"></i>
+        <li><a href="portal.jsp" class="inicio"><i class="fa fa-home" aria-hidden="true"></i>
  Home</a></li>
         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>  Realizar Pedido</a></li>
-        <li><a href="#teste"><i class="fa fa-search" aria-hidden="true"></i>  Buscar Pedido
+        <li><a href="BuscarPedido.jsp"><i class="fa fa-search" aria-hidden="true"></i>  Buscar Pedido
 </a></li>
         <li><a href=""><i class="fa fa-arrow-left" aria-hidden="true"></i>
  Voltar</a></li>

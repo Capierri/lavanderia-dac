@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <jsp:useBean id="roupa" class="lol.beans.Roupa" />
+        <jsp:useBean id="pedido" class="lol.beans.Pedido" />
           <header></header>
   <input type="checkbox" id="chk">
     <label for="chk" class="menu-icon">&#9776;</label>
@@ -29,10 +29,10 @@
     <div class="bg"></div>
     <nav class="menu" id="principal">
       <ul>
-        <li><a href="index.html" class="inicio"><i class="fa fa-home" aria-hidden="true"></i>
+        <li><a href="portal.jsp" class="inicio"><i class="fa fa-home" aria-hidden="true"></i>
  Home</a></li>
         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>  Realizar Pedido</a></li>
-        <li><a href="#teste"><i class="fa fa-search" aria-hidden="true"></i>  Buscar Pedido
+        <li><a href="BuscarPedido.jsp"><i class="fa fa-search" aria-hidden="true"></i>  Buscar Pedido
 </a></li>
         <li><a href=""><i class="fa fa-arrow-left" aria-hidden="true"></i>
  Voltar</a></li>
@@ -54,17 +54,14 @@
                         <td>Quantidade</td>
                         <td>Valor Unitário</td>
                         <td>Valor Total</td>
-                        <td></td>
                     </thead>
                     <tboby>
                     <c:forEach items="${lista}" var="obj">
                         <tr>
-                            <td>
-                                <a href="#" value="${obj.nome}"/>
-                                <c:out value="${obj.valor}"/>
-                                </a>
-                            </td>
-                            <td><c:out value="${obj.prazo}"/></td>
+                            <td><c:out value="${obj.nome}"/></td>
+                            <td><c:out value="${obj.quantidade}"/></td>
+                            <td><c:out value="${obj.preço}"/></td>
+                            <td><c:out value="${obj.valor}"/></td>
                         </tr>
                     </c:forEach>
                     </tboby>
