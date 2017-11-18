@@ -13,7 +13,7 @@
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Pedido</title>
+    <title> Buscar Pedido</title>
     <link rel="stylesheet" type="text/css" href="css/resto.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <jsp:useBean id="roupa" class="lol.beans.Roupa" />
           <header></header>
   <input type="checkbox" id="chk">
     <label for="chk" class="menu-icon">&#9776;</label>
@@ -43,45 +44,32 @@
     <section >   
      <div class="container">
          <div class="meio">
-             <h2>Usuário logado: <c:out value="${user.nome}"/></h2>
-            <c:if test="${erro == 3}">
-                <p class="alert alert-warning">
-                    Parâmetros inválidos. Por favor tente novamente.
-                </p>
+  <h2>Busca</h2>
+ 
+     <c:if test="${'todos'.equals(opc)}">
+                <h1>Pedidos</h1>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <td>Tipo de Roupa</td>
+                        <td>Quantidade</td>
+                        <td>Valor Unitário</td>
+                        <td>Valor Total</td>
+                        <td></td>
+                    </thead>
+                    <tboby>
+                    <c:forEach items="${lista}" var="obj">
+                        <tr>
+                            <td>
+                                <a href="#" value="${obj.nome}"/>
+                                <c:out value="${obj.valor}"/>
+                                </a>
+                            </td>
+                            <td><c:out value="${obj.prazo}"/></td>
+                        </tr>
+                    </c:forEach>
+                    </tboby>
+                </table>
             </c:if>
-  <h2>MEUS PEDIDOS</h2>
-  <p>Pedidos concluídos e entregues = Verde.<br> Pedidos concluídos com entregue pendente = Azul. <br> Pedidos Cancelados = Vermelho <br> Pedidos Pendentes = branco.</p>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Número do Pedido</th>
-        <th>Status</th>
-        <th>Motivo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>90909090</td>
-        <td>Aguardando Pagamento</td>
-        <td>N/A</td>
-      </tr>      
-      <tr class="success">
-        <td>8989899</td>
-        <td>Entrega Pendente</td>
-        <td>Aguardando Entregador</td>
-      </tr>
-      <tr class="danger">
-        <td>76767676</td>
-        <td>Pedido Cancelado</td>
-        <td>N/A</td>
-      </tr>
-      <tr class="info">
-        <td>242424242</td>
-        <td>Pedido Concluído</td>
-        <td>Obrigado! </td>
-      </tr>
-    </tbody>
-  </table>
          </div>      
         </div>
     </section>

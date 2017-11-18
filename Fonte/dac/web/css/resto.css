@@ -29,7 +29,7 @@ header{
   color: #fff;
   cursor: pointer;
   transition: all .4s;
-  left: 300px;
+  left: 200px;
   top:0;
 }
 .menu-icon:hover{
@@ -49,8 +49,8 @@ display: none;
   transition: all .2s;
 }
 #principal{
-  width: 300px;
-  left: -300px;
+  width: 200px;
+  left: -200px;
 }
 ul{
   list-style: none;
@@ -73,11 +73,17 @@ ul li span{
 ul li a:hover{
   background-color: #232731;
   color: #33ccff;
+  text-decoration: none;
 }
-.voltar{
-  margin-top: 60px;
-  background-color: #111;
-  border-left: solid 5px #444;
+.sair{
+  width: 200px;
+  position:absolute;
+  bottom:0;
+  background-color: #EE3B3B;
+  border-left: solid 3px #444;
+}
+.inicio{
+    margin-top: 60px;
 }
 .bg{
 width: 100%;
@@ -92,20 +98,13 @@ display: none;
   display: block;
 }
 #chk:checked ~ #principal{
-transform: translateX(300px);
+transform: translateX(200px);
 }
-#teste{
-  width:  250px;
-  left: -250px;
-}
-#teste:target{
-  transform: translateX(250px);
-  box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
-}
+
 .meio{
-  margin-left: 350px;  
+  margin-left: 100px;  
   margin-top: 70px;
-  padding-right: 100px;
+
   text-align: justify;
 }
   p {

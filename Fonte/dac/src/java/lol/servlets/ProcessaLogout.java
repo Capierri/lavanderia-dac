@@ -1,4 +1,4 @@
-package lol;
+package lol.servlets;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,21 +8,19 @@ package lol;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import lol.Cliente;
 
 /**
  *
  * @author Camilla
  */
-@WebServlet(name = "ProcessaLogin", urlPatterns = {"/ProcessaLogin"})
-public class ProcessaLogin extends HttpServlet {
+@WebServlet(name = "ProcessaLogout", urlPatterns = {"/ProcessaLogout"})
+public class ProcessaLogout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,21 +35,11 @@ public class ProcessaLogin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String login = request.getParameter("email");
-            String senha = request.getParameter("senha");
             
-            if(login.equals(senha)) {
-                HttpSession session = request.getSession();
-                Cliente user = new Cliente();
-                session.setAttribute("user", user);
-                
-                response.sendRedirect("portal.jsp");
-            }
-            else {
-                request.setAttribute("erro", 1);
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.html");
-                rd.forward(request, response);
-            }
+            HttpSession session = request.getSession();
+            session.invalidate();
+            
+            response.sendRedirect("index.html");
         }
     }
 
