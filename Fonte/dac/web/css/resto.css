@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17/11/2017, 18:15:43
+    Author     : Camilla
+*/
+
+* {margin:0; padding:0;}
+header{
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #232731;
+  position: fixed;
+}
+.menu-icon{
+  position: fixed;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #232731;
+  color: #fff;
+  cursor: pointer;
+  transition: all .4s;
+  left: 300px;
+  top:0;
+}
+.menu-icon:hover{
+background-color: #fff;
+color: #33ccff;
+}
+
+#chk{
+display: none;
+}
+.menu{
+  height: 100%;
+  position: fixed;
+  background-color: #222;
+  top: 0;
+  overflow: hidden;
+  transition: all .2s;
+}
+#principal{
+  width: 300px;
+  left: -300px;
+}
+ul{
+  list-style: none;
+}
+ul li a{
+  display: block;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 10px;
+  border-bottom: solid 2px #000;
+  color: #ccc;
+  text-decoration: none;
+  transition: all .2s;
+
+}
+ul li span{
+  float: right;
+  padding-right: 10px;
+}
+ul li a:hover{
+  background-color: #232731;
+  color: #33ccff;
+}
+.voltar{
+  margin-top: 60px;
+  background-color: #111;
+  border-left: solid 5px #444;
+}
+.bg{
+width: 100%;
+height: 100%;
+left:0;
+top:0;
+position: fixed;
+background-color:  rgba(0,0,0,.6);
+display: none;
+}
+#chk:checked ~.bg{
+  display: block;
+}
+#chk:checked ~ #principal{
+transform: translateX(300px);
+}
+#teste{
+  width:  250px;
+  left: -250px;
+}
+#teste:target{
+  transform: translateX(250px);
+  box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
+}
+.meio{
+  margin-left: 350px;  
+  margin-top: 70px;
+  padding-right: 100px;
+  text-align: justify;
+}
+  p {
+  font-size: 15px;
+  line-height: 29px;
+  color: rgba(28, 54, 83, 0.6);
+  padding-bottom: 20px; }
+
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #373c49;
+  text-shadow: white 0.1em 0.1em 0.2em;}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #3D4351; }
+
+h4 {
+    font-size: 40px; 
+    color: #fff;
+    text-shadow: black 0.1em 0.1em 0.2em;}
+
+h5 {
+  font-size: 15px;
+  color: #3D4351;
+  text-transform: uppercase;
+  font-weight: 500; }
+

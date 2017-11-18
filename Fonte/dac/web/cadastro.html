@@ -1,0 +1,217 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Cadastro de Clientes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/queries.css">
+        <link rel="stylesheet" href="css/etline-font.css">
+        <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body id="top">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+ <section class="hero">
+        <section class="navigation">
+            <header>
+            <div class="header-content">
+                <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Tads logo"></a></div>
+                <div class="header-nav">
+                <nav>
+                 <ul class="primary-nav">
+                                <!--- Talves tenha esse menu
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#assets">Assets</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#download">Download</a></li>
+                              -->
+                            </ul>
+                    <ul class="member-actions">
+                        <!--<li><a href="#download" class="btn-white btn-small">Entrar</a></li>-->
+                        <li><a href="index.html" class="btn-white btn-small">Voltar</a></li>
+                    </ul>
+                </nav>
+                </div>
+               
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
+                     </div>
+            </header>
+        </section>
+
+<div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <h1>Preencha todos os campos abaixo para efetuar seu cadastro!</h1><br><br><br>
+                        <div class="down-arrow floating-arrow"><a href="#dados"><i class="fa fa-angle-down"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- começa o formulário de cadastro-->
+        <section id="dados">
+         <div class="container">
+           <div class="row">
+
+        <!--  <div class="feature-list"> -->
+
+            <form class="w3-container w3-card-4 w3-light-grey w3-margin" action="processaCadastro" method="POST" role="form">
+                <br><br><br><h2 class="w3-left" style="color:#33ccff">Dados Pessoais</h2><br><br><br>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="nome" type="text" placeholder="Nome Completo"  required>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="CPF" type="text" placeholder="CPF"  required>
+                    </div>
+                </div>
+
+                <input class="w3-radio" type="radio" name="genero" value="m" checked >
+                <label class="validate">Masculino</label>
+
+                <input class="w3-radio" type="radio" name="genero" value="f">
+                <label class="validate">Feminino</label>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px" ><i class="w3-xxlarge fa fa-user teste" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="end" type="text" placeholder="Endereço   ex: Rua: blabla, 405 - CIC"  required>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="comp" type="text" placeholder="Complemento    ex: Apt 1701, Sobrado 3">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="tel" type="text" placeholder="Telefone"  required>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="email" type="text" placeholder="Email para Login"  required="">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-lock" style="color:#33ccff"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="senha" type="password" placeholder="Senha para Login"  required>
+                    </div>
+                </div>
+
+                <p class="w3-center">
+                    <button type ="submit" class="btn-fill sign-up-btn"> Cadastrar </button>
+                    <button type ="reset" class="w3-btn w3-section w3-black w3-ripple" style="border-radius:40px"> <i class="w3-large w3-spin fa fa-refresh"></i> </button>
+                </p>
+            </form>
+            </div>
+           </div>
+
+           <!--  
+              </div>-->
+    </section>
+<!--rodapé-->
+        <section class="to-top"> 
+            <div class="container">
+                <div class="row">
+                    <div class="to-top-wrap">
+                        <a href="#top" class="top"><i class="fa fa-angle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-links">
+                            <ul class="footer-group">
+                                <!--  <li><a href="#">Features</a></li>
+                                  <li><a href="#">Pricing</a></li>
+                                  <li><a href="#">Sign up</a></li>
+                                -->
+                                <p> Contato:<br>
+                                    Horário de Funcionamento: Seg. à Sáb. das 9h até ás 18h.<br>
+                                    Telefone: +55(41)XXXX-XXX <i class="fa fa-whatsapp"></i><br>
+                                    Email: Lavandotads@ufpr.br<br>
+                                </p></ul>
+                            <p>Copyright © 2015 <a href="#">Sedna</a><br>
+                                <a href="http://tympanus.net/codrops/licensing/">Licence</a> | Crafted with <span class="fa fa-heart pulse2"></span> for <a href="https://tympanus.net/codrops/">Codrops</a>.</p>
+                        </div>
+                    </div>
+                    <div class="social-share">
+                        <p>Conheça a nossa loja física!</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.9957763894763!2d-49.24316418547105!3d-25.43840473945341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce5aa585efaa7%3A0xe3fe1dd702de7752!2sLAVANDERIA+LAVON+-+JARDIM+BOT%C3%82NICO!5e0!3m2!1spt-BR!2sbr!4v1504438130588" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="bower_components/retina.js/dist/retina.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="bower_components/classie/classie.js"></script>
+        <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                        });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
