@@ -3,8 +3,8 @@
     Created on : 17/11/2017, 18:13:36
     Author     : Camilla
 --%>
-<%-- <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%--<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:if test="${user == null}">
     <c:set scope="session" var="erro" value="2"/>
     <c:redirect url="/index.html"/>
@@ -28,7 +28,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#">Perfil</a></li>
         <li><a href="#">Realizar Pedido</a></li>
-        <li><a href="#teste">Meus Pedidos<span>+</span></a></li> <%--aqui também busca os pedidos--%>
+        <li><a href="#teste">Meus Pedidos<span>+</span></a></li> <%--aqui tambÃ©m busca os pedidos--%>
         <li><a href="#">Contato</a></li>
         <li><a href="ProcessaLogout">Sair</a></li>
       </ul>
@@ -50,7 +50,7 @@
             <div class="col-md-4">
             <c:if test="${erro == 3}">
                 <p class="alert alert-warning">
-                    Parâmetros inválidos. Por favor tente novamente.
+                    Parametros invalidos. Por favor tente novamente.
                 </p>
             </c:if>
                 
